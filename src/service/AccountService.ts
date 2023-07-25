@@ -3,7 +3,7 @@ import {Decimal} from 'decimal.js';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 const http = axios.create({
-    baseURL: 'http://localhost:9000',
+    baseURL: 'https://quickpay1-c2257dfd97df.herokuapp.com/',
 });
 
 http.interceptors.request.use(
