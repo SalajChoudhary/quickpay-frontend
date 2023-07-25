@@ -2,7 +2,7 @@ import axios from 'axios';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 const http = axios.create({
-    baseURL:"https://quickpay1-c2257dfd97df.herokuapp.com"
+    baseURL:"https://quickpay1-backend-20700d9e63b5.herokuapp.com"
 });
 
 http.interceptors.request.use((config) => {
