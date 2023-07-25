@@ -66,25 +66,14 @@ export default function PendingTransactionTable() {
     }, [fetchTransactions]);
     const handleAcceptClick = (transactionId: number) => {
         // Call the acceptTransaction API endpoint and handle success/failure
-        TransactionService.acceptTransaction(transactionId)
-            .then(response => {
-                console.log('Transaction accepted:', response.data);
-                // Handle success: Update balance and fetch updated transactions
-                const newBalance = accountBalance - amount;
-                const accountIdString = localStorage.getItem('accountId');
-                const accountId = parseInt(accountIdString!);
-                AccountService.updateBalance(newBalance, accountId)
-                    .then(() => {
-                        fetchTransactions(); // Fetch updated transactions and balance
-                    })
-                    .catch(error => {
+        TransactionService.acceptTransaction(transactionId).then(() => {
+                        fetchTransactions();
+        })
+            .catch(error => {
                         console.error('Error updating balance:', error);
                     });
-            })
-            .catch(error => {
-                console.error('Error accepting transaction:', error);
-                // Handle error
-            });
+
+
     };
 
     const handleRejectClick = (transactionId: number) => {
@@ -100,6 +89,7 @@ export default function PendingTransactionTable() {
             });
     };
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     return (
         <React.Fragment>

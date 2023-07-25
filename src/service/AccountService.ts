@@ -1,6 +1,5 @@
-import axios from 'axios';
-import { Decimal } from 'decimal.js';
-import AccountService from './AccountService';
+import axios, { AxiosRequestConfig } from 'axios';
+import {Decimal} from 'decimal.js';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 const http = axios.create({
@@ -27,7 +26,7 @@ http.interceptors.request.use(
 
 let balance;
 export default {
-    createAccount(account) {
+    createAccount(account: any) {
         return http.post('/account', account);
     },
     async updateBalance(balance: Decimal, accountId: number) {
@@ -52,19 +51,19 @@ export default {
             throw error;
         }
     },
-    getBalance(accountId : number) {
+    getBalance(accountId: number) {
         return http.get(`/account/balance/${accountId}`);
     },
 
-    getAccountByAccountID(accountId) {
+    getAccountByAccountID(accountId: number) {
         return http.get(`/account/${accountId}`);
     },
 
-    getAccountByUserID(userId) {
+    getAccountByUserID(userId: number) {
         return http.get(`/account/user/${userId}`);
     },
 
-    deleteAccount(account) {
+    deleteAccount(account: AxiosRequestConfig<any> | undefined) {
         return http.delete('/account', account);
     },
 };

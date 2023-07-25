@@ -27,9 +27,13 @@ export default function Balance() {
 
     const updateBalance = async (newBalance: Decimal) => {
         const accountId = localStorage.getItem('accountId');
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         if (accountId !== null && !isNaN(Number(accountId))) {
             // Make the API call to update the balance on the server
             try {
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
                 await AccountService.updateBalance(newBalance, Number(accountId));
                 console.log("Balance updated successfully.");
 

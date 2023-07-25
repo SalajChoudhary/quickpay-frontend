@@ -37,7 +37,7 @@ export default {
         return http.delete('/friendrequest', { params: { accountId, friendId } });
     },
 
-    getFriendRequests: function (accountId: string) {
+    getFriendRequests: function (accountId: number) {
         return http.get(`/friendrequest/${accountId}`);
     },
 

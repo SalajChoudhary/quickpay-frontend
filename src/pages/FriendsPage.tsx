@@ -74,11 +74,11 @@ const FriendsPage = () => {
     return (
         <MainPage>
             <CreateFriendRequestComponent onFriendRequestCreate={handleFriendRequestCreate} accountId={accountId} />
-            <FriendsList friends={friends} />
+            <FriendsList />
             <div>
                 <h2>Friend Requests</h2>
                 {friendRequests
-                    .filter((request) => request.receiverId === parseInt(accountId))
+                    .filter((request) => accountId !== null && request.receiverId === parseInt(accountId))
                     .map((request) => (
                         <FriendRequestComponent
                             key={request.requestId}

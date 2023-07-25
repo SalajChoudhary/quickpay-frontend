@@ -3,8 +3,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -50,14 +48,14 @@ export default function SignUp() {
         zipCode: '',
     });
 
-    const handleChange = (event) => {
+    const handleChange = (event: { target: { name: any; value: any; }; }) => {
         setUser((prevUser) => ({
             ...prevUser,
             [event.target.name]: event.target.value,
         }));
     };
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: { preventDefault: () => void; }) => {
         event.preventDefault();
         try {
             const response = await authService.register(user);

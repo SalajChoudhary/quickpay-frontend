@@ -3,8 +3,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -16,14 +14,15 @@ import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import AuthService from "../service/AuthService.ts";
 import AccountService from "../service/AccountService.ts";
-import {isNumber} from "recharts/types/util/DataUtils";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 function SignIn() {
     const navigate = useNavigate();
 
-    const handleSubmit = async (event: React.FormEvent<HTMLDivElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         const data = new FormData(event.currentTarget);
         const username = data.get('username');
         const password = data.get('password');
