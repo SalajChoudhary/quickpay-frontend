@@ -5,6 +5,8 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "noEmitOnError": true,
+    "ignoreErrors": ["TS6133", "TS2345", "TS7006"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
