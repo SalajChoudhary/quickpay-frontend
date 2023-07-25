@@ -13,15 +13,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 import homeImg from '../assets/HomeImage.png';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 interface Props {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
     window?: () => Window;
 }
 
@@ -42,17 +37,17 @@ export default function Home(props: Props) {
             <Divider />
             <List>
                 <ListItem key={'Login'} disablePadding>
-                    <ListItemButton href="/login" sx={{ backgroundColor: 'blue', color: '#EFD469', fontFamily: 'Holtwood One SC', textAlign: 'center' }}>
+                    <ListItemButton component={Link} to="/login" sx={{ backgroundColor: 'blue', color: '#EFD469', fontFamily: 'Holtwood One SC', textAlign: 'center' }}>
                         <ListItemText primary={'Login'} />
                     </ListItemButton>
                 </ListItem>
                 <ListItem key={'Register'} disablePadding>
-                    <ListItemButton href="/register" sx={{ color: '#EFD469', fontFamily: 'Holtwood One SC', textAlign: 'center' }}>
+                    <ListItemButton component={Link} to="/register" sx={{ color: '#EFD469', fontFamily: 'Holtwood One SC', textAlign: 'center' }}>
                         <ListItemText primary={'Register'} />
                     </ListItemButton>
                 </ListItem>
                 <ListItem key={'About'} disablePadding>
-                    <ListItemButton href="/about" sx={{ color: '#EFD469', fontFamily: 'Holtwood One SC', textAlign: 'center' }}>
+                    <ListItemButton component={Link} to="/about" sx={{ color: '#EFD469', fontFamily: 'Holtwood One SC', textAlign: 'center' }}>
                         <ListItemText primary={'About'} />
                     </ListItemButton>
                 </ListItem>
@@ -85,13 +80,13 @@ export default function Home(props: Props) {
                         Quickpay
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        <Button key="Login" sx={{ color: '#EFD469', fontFamily: 'Holtwood One SC'}} href="http://localhost:5173/login">
+                        <Button key="Login" sx={{ color: '#EFD469', fontFamily: 'Holtwood One SC'}} component={Link} to="/login">
                             Login
                         </Button>
-                        <Button key="Register" sx={{ color: '#EFD469', fontFamily: 'Holtwood One SC' }} href="http://localhost:5173/register">
+                        <Button key="Register" sx={{ color: '#EFD469', fontFamily: 'Holtwood One SC' }} component={Link} to="/register">
                             Register
                         </Button>
-                        <Button key="About" sx={{ color: '#EFD469', fontFamily: 'Holtwood One SC' }} href="http://localhost:5173/about">
+                        <Button key="About" sx={{ color: '#EFD469', fontFamily: 'Holtwood One SC' }} component={Link} to="/about">
                             About
                         </Button>
                     </Box>
