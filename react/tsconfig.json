@@ -5,8 +5,6 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "noEmitOnError": false,
-   // "ignoreErrors": ["TS6133", "TS2345", "TS7006", "TS2769"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -20,7 +18,7 @@
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": false,
+    "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
