@@ -12,8 +12,8 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-import AuthService from "../service/AuthService.ts";
-import AccountService from "../service/AccountService.ts";
+import AuthService from "../service/AuthService";
+import AccountService from "../service/AccountService";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 function SignIn() {

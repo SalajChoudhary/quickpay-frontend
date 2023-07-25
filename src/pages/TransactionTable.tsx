@@ -6,8 +6,8 @@ import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Title from './Title';
-import TransactionService from '../service/TransactionService.ts';
-import AccountService from '../service/AccountService.ts';
+import TransactionService from '../service/TransactionService';
+import AccountService from '../service/AccountService';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 function preventDefault(event: React.MouseEvent) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import PayAndRequest from '../Components/PayAndRequest';
-import MainPage from "./MainPage.tsx";
+import MainPage from "./MainPage";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 const PayAndRequestPage: React.FC = () => {

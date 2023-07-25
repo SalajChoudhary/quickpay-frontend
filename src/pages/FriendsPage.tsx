@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import MainPage from './MainPage';
-import FriendsList from '../Components/FriendsList.tsx';
-import FriendRequestComponent from '../Components/FriendRequestComponent.tsx';
-import CreateFriendRequestComponent from '../Components/CreateFriendRequest.tsx';
+import FriendsList from '../Components/FriendsList';
+import FriendRequestComponent from '../Components/FriendRequestComponent';
+import CreateFriendRequestComponent from '../Components/CreateFriendRequest';
 import FriendService from "../service/FriendService";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
