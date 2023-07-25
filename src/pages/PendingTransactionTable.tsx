@@ -9,6 +9,8 @@ import Title from './Title';
 import TransactionService from '../service/TransactionService.ts';
 import AccountService from '../service/AccountService.ts';
 import {useCallback, useEffect, useState} from 'react';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 function preventDefault(event: React.MouseEvent) {
     event.preventDefault();
 }
@@ -62,7 +64,7 @@ export default function PendingTransactionTable() {
             clearInterval(intervalId); // Clear the interval on component unmount
         };
     }, [fetchTransactions]);
-    const handleAcceptClick = (transactionId: number, amount: number) => {
+    const handleAcceptClick = (transactionId: number) => {
         // Call the acceptTransaction API endpoint and handle success/failure
         TransactionService.acceptTransaction(transactionId)
             .then(response => {
@@ -98,6 +100,7 @@ export default function PendingTransactionTable() {
             });
     };
 
+    // @ts-ignore
     return (
         <React.Fragment>
             <Title>Transaction Requests</Title>

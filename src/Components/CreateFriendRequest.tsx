@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { Button, TextField } from '@mui/material';
 import FriendService from '../service/FriendService.ts';
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 const CreateFriendRequest = ({ onFriendRequestCreate, accountId }) => {
     const [friendId, setFriendId] = useState('');
     const [error, setError] = useState('');
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         try {

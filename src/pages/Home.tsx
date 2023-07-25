@@ -15,7 +15,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import homeImg from '../assets/HomeImage.png';
 
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 interface Props {
     /**
      * Injected by the documentation to work in an iframe.

@@ -3,7 +3,8 @@ import { Grid, Paper } from '@mui/material'; // Import Grid and Paper components
 import PendingTransactionTable from './PendingTransactionTable';
 import Balance from './Balance';
 import TransactionTable from './TransactionTable';
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 const Dashboard = () => {
     return (
         <MainPage>

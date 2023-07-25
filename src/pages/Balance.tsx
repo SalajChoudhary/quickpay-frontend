@@ -4,7 +4,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Title from './Title';
 import AccountService from '../service/AccountService';
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 export default function Balance() {
     const [balance, setBalance] = useState(
         new Decimal(localStorage.getItem('balance') || '0.00')

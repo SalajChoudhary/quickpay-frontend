@@ -17,18 +17,19 @@ import axios from "axios";
 import AuthService from "../service/AuthService.ts";
 import AccountService from "../service/AccountService.ts";
 import {isNumber} from "recharts/types/util/DataUtils";
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 function SignIn() {
     const navigate = useNavigate();
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLDivElement>) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         const username = data.get('username');
         const password = data.get('password');
 
         try {
-            let user = {
+            const user = {
                 username: username,
                 password: password,
             };

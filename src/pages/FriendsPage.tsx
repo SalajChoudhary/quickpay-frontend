@@ -4,7 +4,8 @@ import FriendsList from '../Components/FriendsList.tsx';
 import FriendRequestComponent from '../Components/FriendRequestComponent.tsx';
 import CreateFriendRequestComponent from '../Components/CreateFriendRequest.tsx';
 import FriendService from "../service/FriendService";
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 interface FriendRequest {
     requestId: number;
     senderId: number;

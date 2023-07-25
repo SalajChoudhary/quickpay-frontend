@@ -10,7 +10,6 @@ import MainPage from "./pages/MainPage.tsx";
 import PendingTransactionTable from "./pages/PendingTransactionTable.tsx";
 import TransactionTable from "./pages/TransactionTable.tsx";
 import Balance from "./pages/Balance.tsx";
-import FriendRequest from "./Components/FriendRequestComponent.tsx"; // Remove .tsx twice
 import PayAndRequestPage from "./pages/PayAndRequestPage.tsx";
 
 function App() {

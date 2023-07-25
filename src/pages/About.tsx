@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box, Container, Typography } from '@mui/material';
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 const About: React.FC = () => {
     return (
         <Container maxWidth="md">

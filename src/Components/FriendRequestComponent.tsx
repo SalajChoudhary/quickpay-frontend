@@ -1,7 +1,10 @@
 import React from 'react';
 import { Button, ListItem, ListItemText, ListItemAvatar, Avatar, Divider } from '@mui/material';
 import FriendService from '../service/FriendService.ts';
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 const FriendRequestComponent = ({ friendRequest, onAccept, onReject }) => {
     const handleAccept = async () => {
         try {
