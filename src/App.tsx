@@ -16,6 +16,8 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
+                <Route path="/home" element={<Home />} />
+                <Route path="/favicon.ico" element = {<Home />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/main" element={<MainPage> <PendingTransactionTable /> <Balance /> <TransactionTable /></MainPage>} />
                 <Route path="/about" element={<About />} />
