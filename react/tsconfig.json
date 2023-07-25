@@ -6,11 +6,11 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "noEmitOnError": false,
-    "ignoreErrors": ["TS6133", "TS2345", "TS7006", "TS2769"],
+   // "ignoreErrors": ["TS6133", "TS2345", "TS7006", "TS2769"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+   // "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
