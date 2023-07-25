@@ -5,7 +5,7 @@ import Divider from '@mui/material/Divider';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
-import FriendService from "../service/FriendService.ts";
+import FriendService from "../service/FriendService";
 import Link from "@mui/material/Link";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck

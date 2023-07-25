@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, TextField } from '@mui/material';
-import FriendService from '../service/FriendService.ts';
+import FriendService from '../service/FriendService';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
